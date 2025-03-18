@@ -24,10 +24,10 @@ Follow these steps to set up the project on your machine:
    ```bash
    git clone https://github.com/your-username/PortSniffer_VulnTickler.git
    cd PortSniffer_VulnTickler
-Install Dependencies: Install the required Python libraries using pip:
+2. Install Dependencies: Install the required Python libraries using pip:
 pip install python-nmap requests
 
-Set Up NVD API Key: 
+3. Set Up NVD API Key: 
 set NVD_API_KEY=your-api-key-here
 
 Usage
