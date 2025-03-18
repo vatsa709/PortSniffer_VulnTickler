@@ -86,9 +86,3 @@ Port: 80/tcp
 - [Nmap](https://nmap.org/) for its scanning capabilities.
 - [National Vulnerability Database (NVD)](https://nvd.nist.gov/) for providing vulnerability data.
 ```
-
-### Notes for Use
-- **Replace Placeholders**: Update `your-username` and `your-repo-name` in the `git clone` command with your actual GitHub username and repository name.
-- **Copy and Paste**: This content is fully formatted and can be directly copied into your `README.md` file without additional edits (aside from the placeholders).
-
-This version ensures a professional, clear, and comprehensive README for your project!
