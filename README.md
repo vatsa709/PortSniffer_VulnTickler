@@ -2,7 +2,7 @@
 
 # Port Scanner with Vulnerability Assessment
 
-This Python script replicates the functionality of the Nmap command `nmap -A -T4 -Pn <ip>` and integrates vulnerability assessment using the National Vulnerability Database (NVD) API. It identifies open ports, detects operating systems, determines service versions, and checks for known vulnerabilities in the identified services.
+This Python script scans and integrates vulnerability assessment using the National Vulnerability Database (NVD) API. It identifies open ports, detects operating systems, determines service versions, and checks for known vulnerabilities in the identified services.
 
 ## Features
 - **Port Scanning**: Identifies open, closed, or filtered TCP and UDP ports.
@@ -22,8 +22,8 @@ Follow these steps to set up the project on your machine:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/your-username/PortSniffer_VulnTickler.git
+   cd PortSniffer_VulnTickler
    ```
 
 2. **Install Dependencies**:
@@ -37,10 +37,6 @@ Follow these steps to set up the project on your machine:
    - **Linux/Mac**:
      ```bash
      export NVD_API_KEY='your-api-key-here'
-     ```
-   - **Windows**:
-     ```cmd
-     set NVD_API_KEY=your-api-key-here
      ```
    Alternatively, you can hardcode the API key in the script (less secure):
    ```python
@@ -57,8 +53,7 @@ Here’s how to run and use the script:
    ```
 
 2. **Enter Target IP**:
-   When prompted, input the IP address you have permission to scan (e.g., `192.168.1.1`).  
-   - **Important**: Only scan networks you own or have explicit permission to scan.
+   When prompted, input the IP address you have permission to scan (e.g., `10.10.10.10`).  
 
 3. **View Results**:
    The script will output details about open ports, services, versions, and vulnerabilities.
@@ -67,11 +62,10 @@ Here’s how to run and use the script:
 Here’s what you might see after running the script:
 ```
 === Port Scanner with Vulnerability Assessment ===
-Warning: Only scan networks you have permission to access.
-Enter target IP address: 192.168.1.1
-Scanning 192.168.1.1... (this may take a few minutes)
+Enter target IP address: 10.10.10.10
+Scanning 10.10.10.10... (this may take a few minutes)
 
-Host: 192.168.1.1
+Host: 10.10.10.10
 State: up
 OS: Linux 2.6.X (Accuracy: 95%)
 
@@ -88,28 +82,8 @@ Port: 80/tcp
     Description: Apache Log4j2 vulnerability allowing remote code execution...
 ```
 
-## Troubleshooting
-If you encounter issues, try these fixes:
-- **"ModuleNotFoundError: No module named 'nmap'"**: Run `pip install python-nmap` to install the missing library.
-- **"nmap not found"**: Ensure Nmap is installed and in your system’s PATH.
-- **"Temporary failure in name resolution"**: Check your internet connection and DNS settings.
-- **API Errors**: Confirm your NVD API key is correct and that you’re not exceeding rate limits.
-
-## Legal and Ethical Considerations
-- **Permission**: Scanning networks without authorization is illegal in many jurisdictions (e.g., under the Computer Fraud and Abuse Act in the U.S.). Only scan networks you own or have explicit permission to test.
-- **Ethical Use**: This tool is designed for security auditing and educational purposes. Do not use it for malicious activities.
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contributing
-We welcome contributions! To contribute:
-1. Fork the repository.
-2. Make your changes.
-3. Submit a pull request with a clear description of your improvements.
-
 ## Acknowledgments
-- [Nmap](https://nmap.org/) for its powerful scanning capabilities.
+- [Nmap](https://nmap.org/) for its scanning capabilities.
 - [National Vulnerability Database (NVD)](https://nvd.nist.gov/) for providing vulnerability data.
 ```
 
